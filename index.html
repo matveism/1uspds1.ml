@@ -1,0 +1,221 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - RS:CSS Menu</title>
+  
+  
+  
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Arial:400,700);
+h1{
+	font-family: 'Press Start 2P', cursive;
+	text-align: center;
+	color: yellow;
+}
+body{
+	background: #c99f57;
+	min-width:786px;
+	max-width:786px;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.main_nav {
+	background: #444;
+	/*Nav Background Fancy CSS */
+	height:27px;
+	width:766px;
+	background:linear-gradient(180deg, rgba(173,165,151,1) 0%, rgba(179,172,158,1) 30%, rgba(179,172,158,1) 49%, rgba(208,201,187,1) 51%, rgba(208,201,187,1) 70%, rgba(185,178,164,1) 100%);
+	border: 1px solid;
+	border-image-source: linear-gradient(180deg, rgba(234,227,214,1) 0%, rgba(46,40,28,1) 50%, rgba(234,227,214,1) 100%);
+	border-image-slice: 1;
+	/* Fancy Nav Backgriound end */
+	display:grid;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 19px;
+	text-decoration: none;
+}
+.main_nav > ul {
+	display: grid;
+	text-align: center;
+	align-items: center;
+	grid-template-columns: repeat(7, 1fr);
+	list-style-type: none;
+	color: #fff;
+	column-gap: 3px;
+	margin: 0 0 0 0;
+	padding: 0px 2px 0px 2px;
+}
+.main_nav > ul > li,.main_nav > ul > li > a{
+	display:inline-block;
+	color: #e8d800;
+	text-decoration: none;
+	background: #777;
+	background:linear-gradient(180deg, rgba(67,70,75,1) 0%, rgba(0,0,0,1) 100%);
+	color: #e8d800;
+	height:100%;
+	Width: 100%;
+	line-height:28px;
+}
+/* Sub Nav Elements */
+.main_nav > ul > li > .nav_submenu > li a{
+	color: #fff;
+	text-align: left;
+	font-weight: bold;
+}
+li ul.nav_submenu {
+	position: absolute;
+	font-weight: bold;
+	padding: 1px 0 0px 0;
+}
+.main_nav > ul > li > .nav_submenu > li{
+	display: none;
+	border: 1px #fff solid;
+	position: relative;
+	color: #fff;
+	font-weight: bold;
+	text-align: left;
+}
+.main_nav > ul > li > .nav_submenu > li{
+	width: 165px;
+	border-width:0px 1px 1px 1px!important;
+	background: #777;
+	background:linear-gradient(180deg, rgba(67,70,75,1) 0%, rgba(0,0,0,1) 100%);
+	list-style-type: none;
+	opacity: 0.75;
+}
+.main_nav > ul > li > .nav_submenu > li a{
+	text-decoration: none!important;
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	padding-left: 5px;
+}
+/* Hover Elements */
+.main_nav > ul > li > .nav_submenu > li > a:hover{
+	color: #000;
+}
+.main_nav > ul > li:hover > .nav_submenu li {
+	display: block;
+}
+.main_nav > ul > li a:hover{
+	background:linear-gradient(180deg, rgba(251,221,139,1) 0%, rgba(252,206,82,1) 50%, rgba(248,182,3,1) 50%, rgba(250,209,99,1) 100%);
+	color:#000;
+}
+/* Special Elements */
+.main_nav > ul > .nav_login,.main_nav > ul > .nav_login a{
+	color:#4fbf0c;
+}
+.main_nav > ul > .nav_logout,.main_nav > ul > .nav_logout a{
+	color:#bf180c;
+}
+/* Static Elements */
+.main_nav > ul > .nav_current, .main_nav > ul > .nav_current a{
+	background:linear-gradient(180deg, rgba(251,221,139,1) 0%, rgba(252,206,82,1) 50%, rgba(248,182,3,1) 50%, rgba(250,209,99,1) 100%);
+	color:#000;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <body>
+  <h1>RS:CSS - Menu</h1>
+  <nav class='main_nav'>
+    <ul>
+      <li class='nav_current'><a href="#">Home</a></li>
+      <li>
+        <a href="#">Play Now</a>
+        <ul class='nav_submenu'>
+          <li><a href="#">New Users</a></li>
+          <li><a href="#">Existing Users</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Account</a>
+        <ul class='nav_submenu'>
+          <li><a href="#">Upgrade Your Account</a></li>
+          <li><a href="#">Create New Account</a></li>
+          <li><a href="#">Account Management</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Game Guide</a>
+        <ul class='nav_submenu'>
+          <li><a href="#">Manual</a></li>
+          <li><a href="#">Quest Help</a></li>
+          <li><a href="#">Grand Exchange</a></li>
+          <li><a href="#">Rules</a></li>
+          <li><a href="#">Lore</a></li>
+          <li><a href="#">What is RuneScape?</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Community</a>
+        <ul class='nav_submenu'>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">Hiscores</a></li>
+          <li><a href="#">Player Submissions</a></li>
+          <li><a href="#">Adventure's Log</a></li>
+          <li><a href="#">Polls</a></li>
+          <li><a href="#">Downloads & Wallpapers</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Help</a>
+        <ul class='nav_submenu'>
+          <li><a href="#">Customer Support</a></li>
+          <li><a href="#">Password Recovery</a></li>
+          <li><a href="#">Locked Account Recovery</a></li>
+          <li><a href="#">Appeal Bans & Mutes</a></li>
+          <li><a href="#">Submit a Bug Report</a></li>
+          <li><a href="#">Parents' Guide</a></li>
+        </ul>
+      </li>
+      <!----------Logout Button----------- 
+      <li class='nav_logout'><a href="#">Logout</a></li> 
+      ------------------------------------>
+      <li class='nav_login'><a href="#">Login</a></li>
+    </ul>
+  </nav>
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
